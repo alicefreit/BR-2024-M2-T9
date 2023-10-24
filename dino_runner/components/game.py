@@ -62,7 +62,7 @@ class Game:
     def update_score(self):
         self.score += 1
         if self.score % 100 == 0:
-            self.game_speed += 3
+            self.game_speed += 5
 
     def draw(self):
         self.clock.tick(FPS)
