@@ -1,6 +1,6 @@
 import pygame
 
-from dino_runner.utils.constants import BG, ICON, SCREEN_HEIGHT, SCREEN_WIDTH, TITLE, FPS, DEFAULT_TYPE
+from dino_runner.utils.constants import BG, ICON, SCREEN_HEIGHT, SCREEN_WIDTH, TITLE, FPS, DEFAULT_TYPE 
 from dino_runner.utils.constants import draw_message_component
 from dino_runner.components.dinosaur import Dinosaur
 from dino_runner.components.obstacles.obstacle_manager import ObstacleManager
@@ -19,7 +19,7 @@ class Game:
         self.running = False
         self.game_speed = 20
         self.x_pos_bg = 0
-        self.y_pos_bg = 380
+        self.y_pos_bg = 113
         self.score = 0
         self.death_count = 0
 
@@ -67,7 +67,7 @@ class Game:
     def update_score(self):
         self.score += 1
         if self.score % 100 == 0:
-            self.game_speed += 1
+            self.game_speed += 2
 
     def draw(self):
         self.clock.tick(FPS)
@@ -123,7 +123,7 @@ class Game:
                 self.run()   
 
     def show_menu(self):
-        self.screen.fill((255, 255, 255))
+        self.screen.fill((221, 228, 119))
         half_screen_height = SCREEN_HEIGHT // 2
         half_screen_width = SCREEN_WIDTH // 2
 

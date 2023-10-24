@@ -9,7 +9,7 @@ FPS = 30
 IMG_DIR = os.path.join(os.path.dirname(__file__), "..", "assets")
 
 # Assets Constants
-ICON = pygame.image.load(os.path.join(IMG_DIR, "DinoWallpaper.png"))
+ICON = pygame.image.load(os.path.join(IMG_DIR, "Other/logo.png"))
 
 RUNNING = [
     pygame.image.load(os.path.join(IMG_DIR, "Dino/jonhRun1.png")),
@@ -40,20 +40,26 @@ DUCKING_SHIELD = [
     pygame.image.load(os.path.join(IMG_DIR, "Dino/JonhDuckS2.0.png")),
 ]
 
+ANGEL = [
+     pygame.image.load(os.path.join(IMG_DIR, "Dino/JonhAngel.png")),
+      pygame.image.load(os.path.join(IMG_DIR, "Dino/JonhAngel2.png")),
+
+]
+
 DUCKING_HAMMER = [
     pygame.image.load(os.path.join(IMG_DIR, "Dino/JonhDuckH1.png")),
     pygame.image.load(os.path.join(IMG_DIR, "Dino/JonhDuckH2.png")),
 ]
 
 SMALL_CACTUS = [
-    pygame.image.load(os.path.join(IMG_DIR, "Cactus/SmallCactus1.png")),
-    pygame.image.load(os.path.join(IMG_DIR, "Cactus/SmallCactus2.png")),
-    pygame.image.load(os.path.join(IMG_DIR, "Cactus/SmallCactus3.png")),
+    pygame.image.load(os.path.join(IMG_DIR, "Cactus/smallT1.png")),
+    pygame.image.load(os.path.join(IMG_DIR, "Cactus/smallT2.png")),
+    pygame.image.load(os.path.join(IMG_DIR, "Cactus/smallT3.png")),
 ]
 LARGE_CACTUS = [
-    pygame.image.load(os.path.join(IMG_DIR, "Cactus/LargeCactus1.png")),
-    pygame.image.load(os.path.join(IMG_DIR, "Cactus/LargeCactus2.png")),
-    pygame.image.load(os.path.join(IMG_DIR, "Cactus/LargeCactus3.png")),
+    pygame.image.load(os.path.join(IMG_DIR, "Cactus/largeG1.png")),
+    pygame.image.load(os.path.join(IMG_DIR, "Cactus/largeG2.png")),
+    pygame.image.load(os.path.join(IMG_DIR, "Cactus/largeG3.png")),
 ]
 
 BIRD = [
@@ -62,16 +68,18 @@ BIRD = [
 ]
 
 CLOUD = pygame.image.load(os.path.join(IMG_DIR, 'Other/Cloud.png'))
-SHIELD = pygame.image.load(os.path.join(IMG_DIR, 'Other/shield.png'))
+SHIELD = pygame.image.load(os.path.join(IMG_DIR, 'Other/pocao.png'))
+VEVENO = pygame.image.load(os.path.join(IMG_DIR, 'Other/veveno.png'))
 HAMMER = pygame.image.load(os.path.join(IMG_DIR, 'Other/fantasma.png'))
 
-BG = pygame.image.load(os.path.join(IMG_DIR, 'Other/Track.png'))
+BG = pygame.image.load(os.path.join(IMG_DIR, 'Other/rua.jpeg'))
 
 HEART = pygame.image.load(os.path.join(IMG_DIR, 'Other/SmallHeart.png'))
 
 DEFAULT_TYPE = "default"
 SHIELD_TYPE = "shield"
 HAMMER_TYPE = "hammer"
+DEATH_TYPE = "veneno"
 
 
 FONT_COLOR = (0, 0, 0)
