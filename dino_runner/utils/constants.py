@@ -29,6 +29,7 @@ RUNNING_HAMMER = [
 JUMPING = pygame.image.load(os.path.join(IMG_DIR, "Dino/jonhRun1.png"))
 JUMPING_SHIELD = pygame.image.load(os.path.join(IMG_DIR, "Dino/JonhRunS1.0.png"))
 JUMPING_HAMMER = pygame.image.load(os.path.join(IMG_DIR, "Dino/JonhRunH1.png"))
+JUMPING_VEVENO = pygame.image.load(os.path.join(IMG_DIR, "Dino/JonhAngel.png"))
 
 DUCKING = [
     pygame.image.load(os.path.join(IMG_DIR, "Dino/JonhDuck1.0.png")),
@@ -45,6 +46,14 @@ ANGEL = [
       pygame.image.load(os.path.join(IMG_DIR, "Dino/JonhAngel2.png")),
 
 ]
+
+
+ANGEL1 = [
+     pygame.image.load(os.path.join(IMG_DIR, "Dino/JonhAngel.png")),
+      pygame.image.load(os.path.join(IMG_DIR, "Dino/JonAngel2.png")),
+
+]
+
 
 DUCKING_HAMMER = [
     pygame.image.load(os.path.join(IMG_DIR, "Dino/JonhDuckH1.png")),

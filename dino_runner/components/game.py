@@ -6,7 +6,7 @@ from dino_runner.components.dinosaur import Dinosaur
 from dino_runner.components.obstacles.obstacle_manager import ObstacleManager
 from dino_runner.components.power_ups.power_up_manager import PowerUpManager
 from dino_runner.components.power_ups.Phammer_manager import HammerManager
-
+from dino_runner.components.power_ups.power2 import VevenoMaganer
 
 class Game:
     def __init__(self):
@@ -27,6 +27,7 @@ class Game:
         self.obstacle_manager = ObstacleManager()
         self.power_up_manager = PowerUpManager()
         self.Phammer_manager = HammerManager()
+        self.power2 = VevenoMaganer()
 
     def execute(self):
         self.running = True
@@ -43,6 +44,7 @@ class Game:
         self.obstacle_manager.reset_obstacles()
         self.power_up_manager.reset_power_ups()
         self.Phammer_manager.reset_power_ups()
+        self.power2.reset_power_ups()
         self.game_speed = 20
         self.score = 0
         while self.playing:
@@ -63,6 +65,8 @@ class Game:
         self.power_up_manager.update(self)
         self.update_score()
         self.Phammer_manager.update(self)
+        self.update_score()
+        self.power2.update(self)
 
     def update_score(self):
         self.score += 1
@@ -78,6 +82,7 @@ class Game:
         self.obstacle_manager.draw(self.screen)
         self.power_up_manager.draw(self.screen)
         self.Phammer_manager.draw(self.screen)
+        self.power2.draw(self.screen)
         self.draw_power_up_time()
         pygame.display.update()
         pygame.display.flip()

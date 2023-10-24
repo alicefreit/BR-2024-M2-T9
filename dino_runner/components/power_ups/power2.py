@@ -4,7 +4,7 @@ import pygame
 from dino_runner.components.power_ups.pocao import Veveno
 
 
-class PowerUpManager:
+class VevenoMaganer:
     def __init__(self):
         self.power_ups = []
         self.when_appears = 0
@@ -22,7 +22,7 @@ class PowerUpManager:
                 power_up.start_time =pygame.time.get_ticks()
                 game.player.has_power_up = True
                 game.player.type = power_up.type
-                game.player.power_up_time = power_up.start_time + (power_up.duration * 3000)
+                game.player.power_up_time = power_up.start_time + (power_up.duration * 2000)
                 self.power_ups.remove(power_up)
 
     def draw(self, screen):
