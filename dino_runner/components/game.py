@@ -5,6 +5,7 @@ from dino_runner.utils.constants import draw_message_component
 from dino_runner.components.dinosaur import Dinosaur
 from dino_runner.components.obstacles.obstacle_manager import ObstacleManager
 from dino_runner.components.power_ups.power_up_manager import PowerUpManager
+from dino_runner.components.power_ups.Phammer_manager import HammerManager
 
 
 class Game:
@@ -25,6 +26,7 @@ class Game:
         self.player = Dinosaur()
         self.obstacle_manager = ObstacleManager()
         self.power_up_manager = PowerUpManager()
+        self.Phammer_manager = HammerManager()
 
     def execute(self):
         self.running = True
@@ -40,6 +42,7 @@ class Game:
         self.playing = True
         self.obstacle_manager.reset_obstacles()
         self.power_up_manager.reset_power_ups()
+        self.Phammer_manager.reset_power_ups()
         self.game_speed = 20
         self.score = 0
         while self.playing:
@@ -58,11 +61,13 @@ class Game:
         self.obstacle_manager.update(self)
         self.update_score()
         self.power_up_manager.update(self)
+        self.update_score()
+        self.Phammer_manager.update(self)
 
     def update_score(self):
         self.score += 1
         if self.score % 100 == 0:
-            self.game_speed += 5
+            self.game_speed += 1
 
     def draw(self):
         self.clock.tick(FPS)
@@ -72,6 +77,7 @@ class Game:
         self.player.draw(self.screen)
         self.obstacle_manager.draw(self.screen)
         self.power_up_manager.draw(self.screen)
+        self.Phammer_manager.draw(self.screen)
         self.draw_power_up_time()
         pygame.display.update()
         pygame.display.flip()
