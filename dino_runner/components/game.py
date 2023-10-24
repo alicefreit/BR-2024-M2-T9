@@ -4,7 +4,7 @@ from dino_runner.utils.constants import BG, ICON, SCREEN_HEIGHT, SCREEN_WIDTH, T
 from dino_runner.utils.constants import draw_message_component
 from dino_runner.components.dinosaur import Dinosaur
 from dino_runner.components.obstacles.obstacle_manager import ObstacleManager
-from dino_runner.components.power_ups. import PowerUpManager
+from dino_runner.components.power_ups.power_up_manager import PowerUpManager
 
 
 class Game:
